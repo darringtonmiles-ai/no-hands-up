@@ -1,0 +1,19 @@
+# One-click setup on Render (Blueprint). Keeps all data on a 1 GB persistent disk.
+services:
+  - type: web
+    name: hands-up
+    runtime: node
+    plan: starter
+    region: frankfurt
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_DIR
+        value: /var/data
+    disk:
+      name: hands-up-data
+      mountPath: /var/data
+      sizeGB: 1

@@ -1,0 +1,20 @@
+{
+  "name": "hands-up",
+  "version": "1.0.0",
+  "description": "Live class answers: pupils type or handwrite on iPads, the teacher highlights the best and keeps a leaderboard.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "adm-zip": "^0.6.1",
+    "express": "^4.22.3",
+    "pdfkit": "^0.21.0",
+    "socket.io": "^4.8.4"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "private": true
+}
